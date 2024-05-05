@@ -1,0 +1,79 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:party.validate_nif_name.start,parties:"
+msgid "Parties"
+msgstr "Terceros"
+
+msgctxt "field:party.validate_nif_name.start.party,aeat_name:"
+msgid "AEAT Name"
+msgstr "Nombre AEAT"
+
+msgctxt "field:party.validate_nif_name.start.party,aeat_nif:"
+msgid "AEAT NIF"
+msgstr "NIF AEAT"
+
+msgctxt "field:party.validate_nif_name.start.party,orig_name:"
+msgid "Original Name"
+msgstr "Nombre original"
+
+msgctxt "field:party.validate_nif_name.start.party,orig_nif:"
+msgid "Original NIF"
+msgstr "NIF original"
+
+msgctxt "field:party.validate_nif_name.start.party,party:"
+msgid "Party"
+msgstr "Tercero"
+
+msgctxt "field:party.validate_nif_name.start.party,result:"
+msgid "Result"
+msgstr "Resultado"
+
+msgctxt "model:ir.action,name:act_validate_nif_name"
+msgid "Validate NIF/Name"
+msgstr "Validar NIF/Nombre"
+
+msgctxt "model:ir.message,text:msg_wsdl_unexpected_error"
+msgid "Conection to service unexpectedly failed. Error: %(error)s."
+msgstr "La conexión con el servicio falló inesperadamente. Error: %(errores)."
+
+msgctxt "model:party.validate_nif_name.start,name:"
+msgid "Start Validate NIF/Name"
+msgstr "Iniciar Validar NIF/Nombre"
+
+msgctxt "model:party.validate_nif_name.start.party,name:"
+msgid "Start Validate NIF/Name Party"
+msgstr "Iniciar Validar NIF/Nombre tercero"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Identified"
+msgstr "Identificado"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Identified-Removed"
+msgstr "Identificado-Baja"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Identified-Revoked"
+msgstr "Identificado-Revocado"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Not Processed"
+msgstr "No procesado"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Unidentified"
+msgstr "No identificado"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Unidentified-Similar"
+msgstr "No identificado-Similar"
+
+msgctxt "wizard_button:party.validate_nif_name,start,end:"
+msgid "Close"
+msgstr "Cerrar"
+
+msgctxt "wizard_button:party.validate_nif_name,start,update_similar:"
+msgid "Update Similar"
+msgstr "Actualizar similares"
