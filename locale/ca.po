@@ -1,0 +1,79 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:party.validate_nif_name.start,parties:"
+msgid "Parties"
+msgstr "Tercers"
+
+msgctxt "field:party.validate_nif_name.start.party,aeat_name:"
+msgid "AEAT Name"
+msgstr "Nom AEAT"
+
+msgctxt "field:party.validate_nif_name.start.party,aeat_nif:"
+msgid "AEAT NIF"
+msgstr "NIF AEAT"
+
+msgctxt "field:party.validate_nif_name.start.party,orig_name:"
+msgid "Original Name"
+msgstr "Nom original"
+
+msgctxt "field:party.validate_nif_name.start.party,orig_nif:"
+msgid "Original NIF"
+msgstr "NIF original"
+
+msgctxt "field:party.validate_nif_name.start.party,party:"
+msgid "Party"
+msgstr "Tercer"
+
+msgctxt "field:party.validate_nif_name.start.party,result:"
+msgid "Result"
+msgstr "Resultat"
+
+msgctxt "model:ir.action,name:act_validate_nif_name"
+msgid "Validate NIF/Name"
+msgstr "Valida NIF/Nom"
+
+msgctxt "model:ir.message,text:msg_wsdl_unexpected_error"
+msgid "Conection to service unexpectedly failed. Error: %(error)s."
+msgstr "La connexió al servei ha fallat inesperadament. Error: %(error)s."
+
+msgctxt "model:party.validate_nif_name.start,name:"
+msgid "Start Validate NIF/Name"
+msgstr "Iniciar validació NIF/Nom"
+
+msgctxt "model:party.validate_nif_name.start.party,name:"
+msgid "Start Validate NIF/Name Party"
+msgstr "Iniciar validació NIF/Nom tercer"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Identified"
+msgstr "Identificat"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Identified-Removed"
+msgstr "Identificat-Baixa"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Identified-Revoked"
+msgstr "Identificat-Revocat"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Not Processed"
+msgstr "No Processat"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Unidentified"
+msgstr "No Identificat"
+
+msgctxt "selection:party.validate_nif_name.start.party,result:"
+msgid "Unidentified-Similar"
+msgstr "No identificat-Semblant"
+
+msgctxt "wizard_button:party.validate_nif_name,start,end:"
+msgid "Close"
+msgstr "Tanca"
+
+msgctxt "wizard_button:party.validate_nif_name,start,update_similar:"
+msgid "Update Similar"
+msgstr "Actualitza semblants"

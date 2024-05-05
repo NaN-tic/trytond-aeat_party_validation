@@ -1,0 +1,27 @@
+<?xml version='1.0'?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- Validate NIF/Name Wizard -->
+        <record model="ir.action.wizard" id="act_validate_nif_name">
+            <field name="name">Validate NIF/Name</field>
+            <field name="wiz_name">party.validate_nif_name</field>
+        </record>
+        <record model="ir.action.keyword" id="act_validate_nif_name_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">party.party,-1</field>
+            <field name="action" ref="act_validate_nif_name"/>
+        </record>
+        <record model="ir.ui.view" id="validate_nif_name_start_view_form">
+            <field name="model">party.validate_nif_name.start</field>
+            <field name="type">form</field>
+            <field name="name">validate_nif_name_start_form</field>
+        </record>
+        <record model="ir.ui.view" id="validate_nif_name_party_view_tree">
+            <field name="model">party.validate_nif_name.start.party</field>
+            <field name="type">tree</field>
+            <field name="name">validate_nif_name_party_tree</field>
+        </record>
+    </data>
+</tryton>
