@@ -1,9 +1,8 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
-from trytond.pool import Pool, PoolMeta
+from trytond.pool import Pool
 from trytond.model import ModelView, fields
-from trytond.wizard import Wizard, StateView, StateAction, StateTransition, Button
-from trytond.pyson import Eval
+from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.config import config
 from trytond.i18n import gettext
 from trytond.exceptions import UserError
