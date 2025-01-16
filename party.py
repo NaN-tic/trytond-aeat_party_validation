@@ -45,7 +45,6 @@ class ValidateNifName(Wizard):
             name = party.name
             try:
                 response = client.service.VNifV2({'Nif':nif, 'Nombre':name})
-                print(response)
             except ZeepError as e:
                 raise UserError(
                     gettext('aeat_party_validation.msg_wsdl_unexpected_error',
