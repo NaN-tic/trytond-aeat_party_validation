@@ -36,7 +36,7 @@ msgstr "Validar NIF/Nombre"
 
 msgctxt "model:ir.message,text:msg_wsdl_unexpected_error"
 msgid "Conection to service unexpectedly failed. Error: %(error)s."
-msgstr "La conexión con el servicio falló inesperadamente. Error: %(errores)."
+msgstr "La conexión con el servicio falló inesperadamente. Error: %(error)."
 
 msgctxt "model:party.validate_nif_name.start,name:"
 msgid "Start Validate NIF/Name"
