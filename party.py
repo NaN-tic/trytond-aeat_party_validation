@@ -3,7 +3,7 @@
 from trytond.pool import Pool
 from trytond.model import ModelView, fields
 from trytond.wizard import Wizard, StateView, StateTransition, Button
-from trytond.config import config
+import trytond.config as config
 from trytond.i18n import gettext
 from trytond.exceptions import UserError
 
