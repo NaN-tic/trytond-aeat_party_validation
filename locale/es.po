@@ -46,34 +46,30 @@ msgctxt "model:party.validate_nif_name.start.party,name:"
 msgid "Start Validate NIF/Name Party"
 msgstr "Iniciar Validar NIF/Nombre tercero"
 
-msgctxt "selection:party.validate_nif_name.start.party,result:"
-msgid "Identified"
-msgstr "Identificado"
-
-msgctxt "selection:party.validate_nif_name.start.party,result:"
-msgid "Identified-Removed"
-msgstr "Identificado-Baja"
-
-msgctxt "selection:party.validate_nif_name.start.party,result:"
-msgid "Identified-Revoked"
-msgstr "Identificado-Revocado"
-
-msgctxt "selection:party.validate_nif_name.start.party,result:"
-msgid "Not Processed"
-msgstr "No procesado"
-
-msgctxt "selection:party.validate_nif_name.start.party,result:"
-msgid "Unidentified"
-msgstr "No identificado"
-
-msgctxt "selection:party.validate_nif_name.start.party,result:"
-msgid "Unidentified-Similar"
-msgstr "No identificado-Similar"
-
 msgctxt "wizard_button:party.validate_nif_name,start,end:"
 msgid "Close"
 msgstr "Cerrar"
 
-msgctxt "wizard_button:party.validate_nif_name,start,update_similar:"
-msgid "Update Similar"
-msgstr "Actualizar similares"
+msgctxt "wizard_button:party.validate_nif_name,start,update_name:"
+msgid "Update Names"
+msgstr "Actualizar nombres"
+
+msgctxt "field:party.configuration,aeat_certificate:"
+msgid "AEAT Certificate"
+msgstr "Certificado AEAT"
+
+msgctxt "field:party.configuration.aeat_certificate,aeat_certificate:"
+msgid "AEAT Certificate"
+msgstr "Certificado AEAT"
+
+msgctxt "model:ir.message,text:msg_missing_certificate"
+msgid "Configure an AEAT certificate in the party configuration before validating parties."
+msgstr "Configure un certificado AEAT en la configuración de terceros antes de validarlos."
+
+msgctxt "field:party.identifier,aeat_valid:"
+msgid "AEAT NIF/Name Valid"
+msgstr "NIF y nombre validados por la AEAT"
+
+msgctxt "field:party.identifier,aeat_validated_at:"
+msgid "AEAT NIF/Name Checked At"
+msgstr "Fecha de comprobación del NIF y nombre en la AEAT"

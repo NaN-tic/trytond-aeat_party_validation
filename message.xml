@@ -6,5 +6,8 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.message" id="msg_wsdl_unexpected_error">
             <field name="text">Conection to service unexpectedly failed. Error: %(error)s.</field>
         </record>
+        <record model="ir.message" id="msg_missing_certificate">
+            <field name="text">Configure an AEAT certificate in the party configuration before validating parties.</field>
+        </record>
     </data>
 </tryton>

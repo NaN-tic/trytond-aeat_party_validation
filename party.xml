@@ -3,6 +3,21 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
+        <record model="ir.ui.view" id="identifier_form">
+            <field name="model">party.identifier</field>
+            <field name="inherit" ref="party.identifier_form"/>
+            <field name="name">identifier_form</field>
+        </record>
+        <record model="ir.ui.view" id="identifier_list">
+            <field name="model">party.identifier</field>
+            <field name="inherit" ref="party.identifier_list"/>
+            <field name="name">identifier_list</field>
+        </record>
+        <record model="ir.ui.view" id="identifier_list_sequence">
+            <field name="model">party.identifier</field>
+            <field name="inherit" ref="party.identifier_list_sequence"/>
+            <field name="name">identifier_list</field>
+        </record>
         <!-- Validate NIF/Name Wizard -->
         <record model="ir.action.wizard" id="act_validate_nif_name">
             <field name="name">Validate NIF/Name</field>

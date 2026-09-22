@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form" position="inside">
+        <label name="aeat_valid"/>
+        <field name="aeat_valid"/>
+        <label name="aeat_validated_at"/>
+        <field name="aeat_validated_at"/>
+    </xpath>
+</data>
