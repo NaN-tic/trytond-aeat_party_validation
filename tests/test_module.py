@@ -57,9 +57,8 @@ class AeatPartyValidationTestCase(ModuleTestCase):
 
         self.assertEqual([p.identifiers[0].aeat_valid for p in parties],
             [True, False, True])
-        for record in (parties[0], parties[2]):
+        for record in parties:
             self.assertIsNotNone(record.identifiers[0].aeat_validated_at)
-        self.assertIsNone(parties[1].identifiers[0].aeat_validated_at)
         self.assertEqual([r['party'] for r in result['parties']],
             [p.id for p in parties])
         self.assertEqual([r['result'] for r in result['parties']],

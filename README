@@ -20,7 +20,8 @@ Validation
 ----------
 
 The wizard checks each active Spanish identifier and records its last AEAT
-check in party.identifier.aeat_validated_at. aeat_valid is true
+check in party.identifier.aeat_validated_at, including negative results.
+aeat_valid is true
 only for Identificado (case-insensitive); similar, deregistered, revoked,
 unprocessed and unknown results are not a positive validation. Updating names
 from the wizard checks the new names again. Changing the party name clears the
@@ -32,6 +33,22 @@ its check letter), es_nie and es_vat. They are sent as the Spanish NIF of nine
 characters, without an ES prefix. eu_vat is supported only when starting with
 ES; this prefix is removed for the request. Foreign EU VAT identifiers and
 es_cae (an activity and establishment code, not a NIF) are not checked.
+
+When account_invoice is activated, posting invoices checks both the standard
+EU VAT validation and the AEAT validation for supported Spanish identifiers
+of the company and the party. Missing AEAT validation raises a warning that
+can be accepted; a dated negative AEAT result blocks posting. This also
+applies to batch posting.
+
+Scheduled validation
+--------------------
+
+The daily scheduled action party.identifier|check_aeat checks active supported
+identifiers of active parties when they are invalid, unchecked or their AEAT
+validation has expired. The AEAT Validation Period in Parties >
+Configuration defaults to 365 days. Select the companies on the scheduled
+action and configure their AEAT certificates before running it. Subscribers
+receive a notification for identifiers that fail validation.
 
 License
 -------

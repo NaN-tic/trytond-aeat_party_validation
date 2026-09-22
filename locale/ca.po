@@ -11,16 +11,16 @@ msgid "AEAT Name"
 msgstr "Nom AEAT"
 
 msgctxt "field:party.validate_nif_name.start.party,aeat_nif:"
-msgid "AEAT NIF"
-msgstr "NIF AEAT"
+msgid "AEAT Tax Identifier"
+msgstr "Identificador fiscal AEAT"
 
 msgctxt "field:party.validate_nif_name.start.party,orig_name:"
 msgid "Original Name"
 msgstr "Nom original"
 
 msgctxt "field:party.validate_nif_name.start.party,orig_nif:"
-msgid "Original NIF"
-msgstr "NIF original"
+msgid "Original Tax Identifier"
+msgstr "Identificador fiscal original"
 
 msgctxt "field:party.validate_nif_name.start.party,party:"
 msgid "Party"
@@ -31,20 +31,20 @@ msgid "Result"
 msgstr "Resultat"
 
 msgctxt "model:ir.action,name:act_validate_nif_name"
-msgid "Validate NIF/Name"
-msgstr "Valida NIF/Nom"
+msgid "Validate Tax Identifier/Name"
+msgstr "Valida identificador fiscal/nom"
 
 msgctxt "model:ir.message,text:msg_wsdl_unexpected_error"
 msgid "Conection to service unexpectedly failed. Error: %(error)s."
 msgstr "La connexió al servei ha fallat inesperadament. Error: %(error)s."
 
 msgctxt "model:party.validate_nif_name.start,name:"
-msgid "Start Validate NIF/Name"
-msgstr "Iniciar validació NIF/Nom"
+msgid "Start Validate Tax Identifier/Name"
+msgstr "Iniciar validació identificador fiscal/nom"
 
 msgctxt "model:party.validate_nif_name.start.party,name:"
-msgid "Start Validate NIF/Name Party"
-msgstr "Iniciar validació NIF/Nom tercer"
+msgid "Start Validate Tax Identifier/Name Party"
+msgstr "Iniciar validació identificador fiscal/nom tercer"
 
 msgctxt "wizard_button:party.validate_nif_name,start,end:"
 msgid "Close"
@@ -67,9 +67,41 @@ msgid "Configure an AEAT certificate in the party configuration before validatin
 msgstr "Configureu un certificat AEAT a la configuració de tercers abans de validar-los."
 
 msgctxt "field:party.identifier,aeat_valid:"
-msgid "AEAT NIF/Name Valid"
-msgstr "NIF i nom validats per l’AEAT"
+msgid "AEAT Validated"
+msgstr "Validat per l’AEAT"
+
+msgctxt "model:ir.model.button,string:identifier_check_aeat_button"
+msgid "Validate AEAT"
+msgstr "Valida AEAT"
+
+msgctxt "model:ir.message,text:msg_invoice_tax_identifier_invalid"
+msgid "The tax identifier \"%(identifier)s\" on invoice \"%(invoice)s\" does not have a valid AEAT tax identifier/name validation."
+msgstr "L’identificador fiscal \"%(identifier)s\" de la factura \"%(invoice)s\" no té una validació d’identificador fiscal i nom vàlida de l’AEAT."
 
 msgctxt "field:party.identifier,aeat_validated_at:"
-msgid "AEAT NIF/Name Checked At"
-msgstr "Data de comprovació del NIF i nom a l’AEAT"
+msgid "AEAT Tax Identifier/Name Checked At"
+msgstr "Data de comprovació de l’identificador fiscal i nom a l’AEAT"
+
+msgctxt "selection:ir.cron,method:"
+msgid "Check Tax Identifier/Name with AEAT"
+msgstr "Comprova identificador fiscal/nom amb l’AEAT"
+
+msgctxt "field:party.configuration,identifier_aeat_validation_period:"
+msgid "AEAT Validation Period"
+msgstr "Període de validesa AEAT"
+
+msgctxt "help:party.configuration,identifier_aeat_validation_period:"
+msgid "The period during which the AEAT tax identifier/name validation remains valid."
+msgstr "Període durant el qual la validació de l’identificador fiscal i nom a l’AEAT continua sent vàlida."
+
+msgctxt "model:ir.message,text:msg_party_identifier_aeat_invalid"
+msgid "The following identifiers failed AEAT tax identifier/name validation: %(identifiers)s."
+msgstr "Els identificadors següents no han superat la validació identificador fiscal/nom de l’AEAT: %(identifiers)s."
+
+msgctxt "view:party.identifier:"
+msgid "at"
+msgstr "el"
+
+msgctxt "help:party.identifier,aeat_valid:"
+msgid "The tax identifier and name have been validated by AEAT."
+msgstr "L’identificador fiscal i el nom han estat validats per l’AEAT."

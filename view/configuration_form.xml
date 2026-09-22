@@ -3,5 +3,7 @@
     <xpath expr="/form" position="inside">
         <label name="aeat_certificate"/>
         <field name="aeat_certificate"/>
+        <label name="identifier_aeat_validation_period"/>
+        <field name="identifier_aeat_validation_period"/>
     </xpath>
 </data>

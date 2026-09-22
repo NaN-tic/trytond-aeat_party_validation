@@ -3,6 +3,12 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data grouped="1">
+        <record model="ir.message" id="msg_party_identifier_aeat_invalid">
+            <field name="text">The following identifiers failed AEAT tax identifier/name validation: %(identifiers)s.</field>
+        </record>
+        <record model="ir.message" id="msg_invoice_tax_identifier_invalid">
+            <field name="text">The tax identifier "%(identifier)s" on invoice "%(invoice)s" does not have a valid AEAT tax identifier/name validation.</field>
+        </record>
         <record model="ir.message" id="msg_wsdl_unexpected_error">
             <field name="text">Conection to service unexpectedly failed. Error: %(error)s.</field>
         </record>
