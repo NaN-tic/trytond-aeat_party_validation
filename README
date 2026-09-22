@@ -8,6 +8,30 @@ Installing
 
 See INSTALL
 
+Configuration
+-------------
+
+Load the certificate and private key with certificate_manager, then select
+the AEAT Certificate in Parties > Configuration for each company.
+The certificate_manager encryption and production settings apply.
+The legacy account_es_sii certificate and privatekey settings are no longer used.
+
+Validation
+----------
+
+The wizard checks each active Spanish identifier and records its last AEAT
+check in party.identifier.aeat_validated_at. aeat_valid is true
+only for Identificado (case-insensitive); similar, deregistered, revoked,
+unprocessed and unknown results are not a positive validation. Updating names
+from the wizard checks the new names again. Changing the party name clears the
+validation of all its identifiers. Changing an identifier code, type, owner or
+active state clears its own validation. Copies must also be validated again.
+
+The supported identifier types are es_cif (legal entities), es_dni (DNI with
+its check letter), es_nie and es_vat. They are sent as the Spanish NIF of nine
+characters, without an ES prefix. eu_vat is supported only when starting with
+ES; this prefix is removed for the request. Foreign EU VAT identifiers and
+es_cae (an activity and establishment code, not a NIF) are not checked.
 
 License
 -------

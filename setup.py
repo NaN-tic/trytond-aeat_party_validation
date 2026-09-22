@@ -10,6 +10,7 @@ from configparser import ConfigParser
 MODULE = 'aeat_party_validation'
 PREFIX = 'nantic'
 MODULE2PREFIX = {
+    'certificate_manager': 'nantic',
 }
 
 
