@@ -3,11 +3,13 @@
 from datetime import datetime
 
 from trytond.pool import Pool, PoolMeta
+from trytond.pyson import Eval
 from trytond.model import ModelView, fields
 from trytond.wizard import Wizard, StateView, StateTransition, Button
 from trytond.i18n import gettext
 from trytond.exceptions import UserError
 from trytond.tools import grouped_slice
+from trytond.modules.party.party import IDENTIFIER_TYPES
 
 from requests import Session
 from requests.exceptions import RequestException
@@ -22,6 +24,10 @@ AEAT_WSDL_URL = (
 
 # Keep SOAP requests below the AEAT limit of 20,000 taxpayers.
 AEAT_BATCH_SIZE = 1000
+
+_AEAT_INVISIBLE = ~Eval('type').in_(
+    [name for name, _ in IDENTIFIER_TYPES
+        if name.startswith('es_') or name == 'eu_vat'])
 
 
 def _aeat_values_changed(record, values, names):
@@ -109,8 +115,29 @@ class Party(metaclass=PoolMeta):
 class Identifier(metaclass=PoolMeta):
     __name__ = 'party.identifier'
 
-    aeat_valid = fields.Boolean('AEAT NIF/Name Valid', readonly=True)
-    aeat_validated_at = fields.DateTime('AEAT NIF/Name Checked At', readonly=True)
+    aeat_valid = fields.Boolean('AEAT Validated', readonly=True,
+        help='The tax identifier and name have been validated by AEAT.',
+        states={
+            'invisible': _AEAT_INVISIBLE,
+            })
+    aeat_validated_at = fields.DateTime('AEAT Tax Identifier/Name Checked At', readonly=True,
+        states={
+            'invisible': _AEAT_INVISIBLE,
+            })
+
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls._buttons.update(
+            check_aeat_button={
+                'invisible': _AEAT_INVISIBLE,
+                'readonly': ~Eval('active', True) | ~Eval('party'),
+                })
+
+    @classmethod
+    @ModelView.button_action('aeat_party_validation.act_validate_nif_name')
+    def check_aeat_button(cls, identifiers):
+        pass
 
     @property
     def aeat_nif(self):
@@ -143,7 +170,7 @@ class Identifier(metaclass=PoolMeta):
 
 
 class ValidateNifName(Wizard):
-    'Validate NIF/Name'
+    'Validate Tax Identifier/Name'
     __name__ = 'party.validate_nif_name'
     start = StateView(
         'party.validate_nif_name.start',
@@ -155,7 +182,12 @@ class ValidateNifName(Wizard):
 
     def default_start(self, fields):
         Party = Pool().get('party.party')
-        return Party.check_aeat(self.records)
+        parties = self.records
+        if self.model.__name__ == 'party.identifier':
+            parties = list(dict.fromkeys(
+                    identifier.party for identifier in self.records
+                    if identifier.party))
+        return Party.check_aeat(parties)
 
     def transition_update_name(self):
         pool = Pool()
@@ -179,7 +211,7 @@ class ValidateNifName(Wizard):
 
 
 class ValidateNifNameStart(ModelView):
-    "Start Validate NIF/Name"
+    "Start Validate Tax Identifier/Name"
     __name__ = 'party.validate_nif_name.start'
 
     parties = fields.One2Many('party.validate_nif_name.start.party', None,
@@ -187,14 +219,14 @@ class ValidateNifNameStart(ModelView):
 
 
 class ValidateNifNameParty(ModelView):
-    "Start Validate NIF/Name Party"
+    "Start Validate Tax Identifier/Name Party"
     __name__ = "party.validate_nif_name.start.party"
 
     party = fields.Many2One('party.party', 'Party', readonly=True)
     orig_name = fields.Char('Original Name', readonly=True)
-    orig_nif = fields.Char('Original NIF', readonly=True)
+    orig_nif = fields.Char('Original Tax Identifier', readonly=True)
     aeat_name = fields.Char('AEAT Name', readonly=True)
-    aeat_nif = fields.Char('AEAT NIF', readonly=True)
+    aeat_nif = fields.Char('AEAT Tax Identifier', readonly=True)
     # Known AEAT results (casing may vary):
     # Identificado: taxpayer identified with the supplied data.
     # No identificado: taxpayer could not be identified.

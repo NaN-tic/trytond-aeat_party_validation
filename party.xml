@@ -18,9 +18,14 @@ this repository contains the full copyright notices and license terms. -->
             <field name="inherit" ref="party.identifier_list_sequence"/>
             <field name="name">identifier_list</field>
         </record>
-        <!-- Validate NIF/Name Wizard -->
+        <!-- Validate Tax Identifier/Name Wizard -->
+        <record model="ir.model.button" id="identifier_check_aeat_button">
+            <field name="model">party.identifier</field>
+            <field name="name">check_aeat_button</field>
+            <field name="string">Validate AEAT</field>
+        </record>
         <record model="ir.action.wizard" id="act_validate_nif_name">
-            <field name="name">Validate NIF/Name</field>
+            <field name="name">Validate Tax Identifier/Name</field>
             <field name="wiz_name">party.validate_nif_name</field>
         </record>
         <record model="ir.action.keyword" id="act_validate_nif_name_keyword">

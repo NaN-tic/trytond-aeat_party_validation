@@ -11,16 +11,16 @@ msgid "AEAT Name"
 msgstr "Nombre AEAT"
 
 msgctxt "field:party.validate_nif_name.start.party,aeat_nif:"
-msgid "AEAT NIF"
-msgstr "NIF AEAT"
+msgid "AEAT Tax Identifier"
+msgstr "Identificador fiscal AEAT"
 
 msgctxt "field:party.validate_nif_name.start.party,orig_name:"
 msgid "Original Name"
 msgstr "Nombre original"
 
 msgctxt "field:party.validate_nif_name.start.party,orig_nif:"
-msgid "Original NIF"
-msgstr "NIF original"
+msgid "Original Tax Identifier"
+msgstr "Identificador fiscal original"
 
 msgctxt "field:party.validate_nif_name.start.party,party:"
 msgid "Party"
@@ -31,20 +31,20 @@ msgid "Result"
 msgstr "Resultado"
 
 msgctxt "model:ir.action,name:act_validate_nif_name"
-msgid "Validate NIF/Name"
-msgstr "Validar NIF/Nombre"
+msgid "Validate Tax Identifier/Name"
+msgstr "Validar identificador fiscal/nombre"
 
 msgctxt "model:ir.message,text:msg_wsdl_unexpected_error"
 msgid "Conection to service unexpectedly failed. Error: %(error)s."
 msgstr "La conexión con el servicio falló inesperadamente. Error: %(error)s."
 
 msgctxt "model:party.validate_nif_name.start,name:"
-msgid "Start Validate NIF/Name"
-msgstr "Iniciar Validar NIF/Nombre"
+msgid "Start Validate Tax Identifier/Name"
+msgstr "Iniciar Validar identificador fiscal/nombre"
 
 msgctxt "model:party.validate_nif_name.start.party,name:"
-msgid "Start Validate NIF/Name Party"
-msgstr "Iniciar Validar NIF/Nombre tercero"
+msgid "Start Validate Tax Identifier/Name Party"
+msgstr "Iniciar Validar identificador fiscal/nombre tercero"
 
 msgctxt "wizard_button:party.validate_nif_name,start,end:"
 msgid "Close"
@@ -67,9 +67,21 @@ msgid "Configure an AEAT certificate in the party configuration before validatin
 msgstr "Configure un certificado AEAT en la configuración de terceros antes de validarlos."
 
 msgctxt "field:party.identifier,aeat_valid:"
-msgid "AEAT NIF/Name Valid"
-msgstr "NIF y nombre validados por la AEAT"
+msgid "AEAT Validated"
+msgstr "Validado por la AEAT"
 
 msgctxt "field:party.identifier,aeat_validated_at:"
-msgid "AEAT NIF/Name Checked At"
-msgstr "Fecha de comprobación del NIF y nombre en la AEAT"
+msgid "AEAT Tax Identifier/Name Checked At"
+msgstr "Fecha de comprobación del identificador fiscal y nombre en la AEAT"
+
+msgctxt "model:ir.model.button,string:identifier_check_aeat_button"
+msgid "Validate AEAT"
+msgstr "Validar AEAT"
+
+msgctxt "view:party.identifier:"
+msgid "at"
+msgstr "el"
+
+msgctxt "help:party.identifier,aeat_valid:"
+msgid "The tax identifier and name have been validated by AEAT."
+msgstr "El identificador fiscal y el nombre han sido validados por la AEAT."
