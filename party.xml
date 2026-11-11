@@ -7,6 +7,7 @@ this repository contains the full copyright notices and license terms. -->
         <record model="ir.action.wizard" id="act_validate_nif_name">
             <field name="name">Validate NIF/Name</field>
             <field name="wiz_name">party.validate_nif_name</field>
+            <field name="model">party.party</field>
         </record>
         <record model="ir.action.keyword" id="act_validate_nif_name_keyword">
             <field name="keyword">form_action</field>
